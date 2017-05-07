@@ -26,6 +26,7 @@ resource "aws_subnet" "public" {
   tags {
     Name        = "${var.environment}-public-subnet-${count.index}"
     Environment = "${var.environment}"
+    SubnetType  = "public"
   }
 }
 
